@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/JavaInternalProjects/!svn/ver/150/trunk/Reflections_UI/src/com/ciber/quratz/schedular
+END
+SchedulerJob.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/JavaInternalProjects/!svn/ver/139/trunk/Reflections_UI/src/com/ciber/quratz/schedular/SchedulerJob.java
+END
+ReflectionTerminationSchedularJob.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/JavaInternalProjects/!svn/ver/150/trunk/Reflections_UI/src/com/ciber/quratz/schedular/ReflectionTerminationSchedularJob.java
+END
+ReflectionTerminationQuartzPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/JavaInternalProjects/!svn/ver/150/trunk/Reflections_UI/src/com/ciber/quratz/schedular/ReflectionTerminationQuartzPlugin.java
+END
+QuartzPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/JavaInternalProjects/!svn/ver/136/trunk/Reflections_UI/src/com/ciber/quratz/schedular/QuartzPlugin.java
+END

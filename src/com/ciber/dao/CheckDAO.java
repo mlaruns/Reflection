@@ -1,0 +1,17 @@
+package com.ciber.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import com.ciber.beans.JohariWidowAdjectives;
+import com.ciber.beans.Questions;
+
+public interface CheckDAO{
+	public String checkAnswerCount(String username,  Map<String,Questions> map,String applicationId);
+	public boolean insertAnswers(String username,  Map<String,Questions> map,String applicationId);
+	public boolean updateApplicationStatus(String username,  Map<String,Questions> map,String applicationId,String ans_count);
+	public int flagCheckUser(String applicationId,String empId,String role);
+	public List<Questions> getQuestion(String appId,String username,String role);
+	public boolean insertJohariAnswers(String username, String johariAns, String applicationId);
+	public String getJohariUserAns(String appId,String username);
+}

@@ -1,0 +1,52 @@
+8
+
+dir
+170
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects/trunk/Reflections_UI/src/com/ciber/mail
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects
+
+
+
+2015-09-29T10:43:22.828478Z
+139
+LMuriyal
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4cb659a6-18a1-ed46-9628-8c3b8366a129
+
+MailNotification.java
+file
+
+
+
+
+2016-06-28T05:43:48.517000Z
+692232ccfbd0b3ad7e3bc282c0d58655
+2015-09-29T10:43:22.828478Z
+139
+LMuriyal
+
+SendMailThread.java
+file
+
+
+
+
+2016-09-14T04:48:29.456000Z
+8bf452113b52277445832983767d99a0
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+

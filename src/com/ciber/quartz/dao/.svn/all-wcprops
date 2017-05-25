@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/JavaInternalProjects/!svn/ver/158/trunk/Reflections_UI/src/com/ciber/quartz/dao
+END
+EmailDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/JavaInternalProjects/!svn/ver/158/trunk/Reflections_UI/src/com/ciber/quartz/dao/EmailDaoImpl.java
+END
+JobLogDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/JavaInternalProjects/!svn/ver/139/trunk/Reflections_UI/src/com/ciber/quartz/dao/JobLogDaoImpl.java
+END
+IEmailDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/JavaInternalProjects/!svn/ver/136/trunk/Reflections_UI/src/com/ciber/quartz/dao/IEmailDao.java
+END
+IJobLogDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/JavaInternalProjects/!svn/ver/136/trunk/Reflections_UI/src/com/ciber/quartz/dao/IJobLogDao.java
+END

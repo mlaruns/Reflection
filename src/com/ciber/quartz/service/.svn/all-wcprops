@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/JavaInternalProjects/!svn/ver/139/trunk/Reflections_UI/src/com/ciber/quartz/service
+END
+IJobLogService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/JavaInternalProjects/!svn/ver/136/trunk/Reflections_UI/src/com/ciber/quartz/service/IJobLogService.java
+END
+IEmailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/JavaInternalProjects/!svn/ver/136/trunk/Reflections_UI/src/com/ciber/quartz/service/IEmailService.java
+END
+EmailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/JavaInternalProjects/!svn/ver/136/trunk/Reflections_UI/src/com/ciber/quartz/service/EmailServiceImpl.java
+END
+JobLogServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/JavaInternalProjects/!svn/ver/139/trunk/Reflections_UI/src/com/ciber/quartz/service/JobLogServiceImpl.java
+END

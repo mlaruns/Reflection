@@ -1,0 +1,70 @@
+8
+
+dir
+170
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects/trunk/Reflections_UI/WebContent/js
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects
+
+
+
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4cb659a6-18a1-ed46-9628-8c3b8366a129
+
+bootstrap
+dir
+
+html5.js
+file
+
+
+
+
+2016-06-28T05:44:02.278000Z
+c5776ab906652add91f9d827138cddf5
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+
+jquery
+dir
+
+jquery-dateFormat.js
+file
+
+
+
+
+2016-06-28T05:44:02.403000Z
+e298f8a5b95a9beb9afc1f30d7e0ae7f
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+
+script.js
+file
+
+
+
+
+2016-06-28T05:44:02.263000Z
+d41d8cd98f00b204e9800998ecf8427e
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+

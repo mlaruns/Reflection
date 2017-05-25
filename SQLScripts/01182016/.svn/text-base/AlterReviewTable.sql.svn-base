@@ -1,0 +1,20 @@
+-- improvementOption
+IF NOT EXISTS (
+		SELECT 1
+		FROM INFORMATION_SCHEMA.COLUMNS
+		WHERE TABLE_NAME = '[REFLECTION].[Review]'
+			AND COLUMN_NAME = 'improvementOption'
+		)
+BEGIN
+	ALTER TABLE [REFLECTION].[Review] ADD [improvementOption] [int] NULL
+END
+-- Creation Date
+IF NOT EXISTS (
+		SELECT 1
+		FROM INFORMATION_SCHEMA.COLUMNS
+		WHERE TABLE_NAME = '[REFLECTION].[Review]'
+			AND COLUMN_NAME = 'CreationDate'
+		)
+BEGIN
+	ALTER TABLE [REFLECTION].[Review] ADD [CreationDate] [datetime] NULL
+END

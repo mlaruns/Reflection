@@ -1,0 +1,54 @@
+8
+
+dir
+170
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects/trunk/Reflections_UI/WebContent/templates
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects
+
+
+
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4cb659a6-18a1-ed46-9628-8c3b8366a129
+
+People Managers List.xls
+file
+
+https://cbr-srv-sry.ciber-india.in/svn/JavaInternalProjects/trunk/Reflections_UI/WebContent/templates/People%20Managers%20List.xls
+
+
+2016-06-28T05:44:03.230000Z
+d1281e99d033f3b18b324ad7dda8fa55
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+has-props
+
+QuestionsTemplate.xls
+file
+
+
+
+
+2016-06-28T05:44:03.261000Z
+5c9fa8fbefc9701a59860069f7586eea
+2015-08-07T07:23:59.494185Z
+98
+jaleel
+has-props
+

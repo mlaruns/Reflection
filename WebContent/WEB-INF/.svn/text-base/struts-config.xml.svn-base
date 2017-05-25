@@ -1,0 +1,104 @@
+
+ <!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+       "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+    <form-beans>  
+    <form-bean name="loginForm" type="com.ciber.common.form.LoginForm"></form-bean>
+    <form-bean name="applicationModel" type="com.ciber.admin.form.ApplicationModel"></form-bean>
+    <form-bean name="FileUploadForm" type="com.ciber.admin.form.FileUploadForm" /> 
+    </form-beans>
+    
+    <action-mappings>
+    
+		<action path="/viewRecent" forward="viewRecent" />
+		<action path="/createNewApp" forward="createNewApp"/>
+		<action path="/overAllReport" forward="overAllReport"/>
+		<action path="/managerInof" forward="managerInof" />
+		<!-- <action path="/adminHome" forward="AdminHome" /> -->
+		<action path="/uploadexcel" forward="excelUpload" />
+		<action path="/LoginPage" forward="login" />
+		<action path="/ImprovementOptions" forward="ImprovementOpt" />
+		
+		<action path="/adminHome" type="com.ciber.admin.action.AdminHomeAction" >
+		<forward name="success" path="AdminHome"/>
+		</action>
+		
+		<action path="/uploadDataManager" name="FileUploadForm" forward ="uploadManager" />
+		
+		<action path="/question"   type="com.ciber.common.action.QuestionAction" >
+            <forward name="success" path="normalLogin"/>
+        </action>
+		
+					
+		 <action path="/adminApplication" name="applicationModel" scope="session" parameter="action" type="com.ciber.admin.action.AdminApplicationAction">
+        	 <forward name="success" path="adminlogin"/>
+        	 <forward name="viewRecent" path="viewRecent"/>
+        	 <forward name="veiwReporties" path="reportiesView"/>
+        	 <forward name="viewFeedBack" path="feedBackView"/>
+        	  <forward name="viewSurvey" path="viewSurvey"/>
+        	 <forward name="addApplication" path="addQueSuccess"/>
+        	 <forward name="failureAdd" path="createNewApp"/>
+        	 <forward name="failureManager" path="uploadManager"/>
+        	  <forward name="viewSurveyMng" path="viewSurveyMng"/>
+        	  <forward name="competencyView" path="competencyView"/>
+        	  <forward name="ImprovementPage" path="ImprovementOpt"/>
+		 </action>
+		 
+	
+          <action path="/uploadAction" name="FileUploadForm" scope="request" validate="true" type="com.ciber.admin.action.UploadAction">
+        	 <forward name="failure" path="excelUpload"/>
+        	 <forward name="success" path="addQueSuccess"/>
+		 </action>
+    
+		
+		<action path="/overAllReport" type="com.ciber.admin.action.OverAllReportAction">
+        	 <forward name="success" path="viewRecent"/>
+		</action>
+    
+        <action path="/Login" type="com.ciber.common.action.LoginAction"  input="/jsp/indexS.jsp">
+            <forward name="success" path="optionList"></forward>
+           <forward name="failure" path="login"/>
+            <forward name="admin" path="adminlogin"/>
+            <forward name="attempted" path="attempted"/>
+        </action>
+         <action path="/LoginSSO" name="loginForm" scope="session" type="com.ciber.common.action.LoginAction"  input="/jsp/indexS.jsp" validate="false">
+            <forward name="success" path="optionList"/>
+            <forward name="failure" path="login"/>
+            <forward name="admin" path="adminlogin"/>
+        </action>
+        
+        <action path="/check" name="loginForm"  type="com.ciber.common.action.CheckAction" input="/jsp/indexS.jsp" validate="false">
+            <forward name="success" path="checkSuccess"/>
+            <forward name="failure" path="login"/>
+        </action>
+        
+        <action path="/displayQuestion" type="com.ciber.admin.action.DisplayAction">
+                    <forward name="success" path="normalLogin"/>
+                    <forward name="view"  path="view"/>
+        </action>
+          <action path="/navigation" type="com.ciber.admin.action.NavigationRegisterAction">
+          <forward name="success" path="optionList"></forward>
+            <forward name="failure" path="login"/>
+            
+         </action>
+         
+         <action path="/Welcome" type="org.apache.struts.actions.ForwardAction"
+		parameter="/pages/quartz_started.jsp" />
+         
+        
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+    <message-resources parameter="com/ciber/properties/ApplicationResource"/>
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <plug-in className="com.ciber.quratz.schedular.QuartzPlugin" />
+    
+    <plug-in className="com.ciber.quratz.schedular.ReflectionTerminationQuartzPlugin" />
+   
+</struts-config>

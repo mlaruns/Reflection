@@ -1,0 +1,314 @@
+package com.ciber.common.action;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import javax.naming.AuthenticationException;
+import javax.naming.Context;
+import javax.naming.NamingEnumeration;
+import javax.naming.NamingException;
+import javax.naming.directory.Attributes;
+import javax.naming.directory.DirContext;
+import javax.naming.directory.InitialDirContext;
+import javax.naming.directory.SearchControls;
+import javax.naming.directory.SearchResult;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
+import com.ciber.admin.form.ApplicationModel;
+import com.ciber.beans.User;
+import com.ciber.beans.UserApplicationList;
+import com.ciber.constants.Constants;
+import com.ciber.service.JDBCService;
+
+/**
+ * @author CIBER INC.
+ * 
+ * @struts.action path="/logon"
+ * 
+ * @struts.action-forward name="Success" path="/showBookingList.do?method=View"                        
+ * 
+ * @struts.action-forward name="Failure" path=".login" redirect="true"
+ */
+public class LoginAction extends org.apache.struts.action.Action {
+
+	/** The <code>Log</code> instance for this class. */
+	//private Logger log = Logger.getLogger(this.getClass().getName());
+	private final static String SUCCESS = "success";
+	private final static String FAILURE = "failure";
+	private final static String ADMIN = "admin";
+	public static final String DEFAULT_ENCODING="UTF-8"; 
+	static BASE64Encoder enc=new BASE64Encoder();
+	static BASE64Decoder dec=new BASE64Decoder();
+	
+	ResourceBundle bundle = ResourceBundle.getBundle("com/ciber/properties/ApplicationResource") ;	
+	String adminMail=bundle.getString("admin.mailID");
+	List<String> adminUsers=Arrays.asList(adminMail.split(","));
+	/**
+	 * This method is invoked in two ways one GIDC application and CSpeak Login.
+	 * 
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return ActionForward
+	 * @throws Exception
+	 */
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+
+		String userName = null;
+		String userPassword = null;
+		HttpSession httpSession = request.getSession();
+		JDBCService service = new JDBCService();
+		ActionMessages messages = new ActionMessages();
+
+		// SSO Encription code.
+		String Querystr = request.getQueryString();
+			if (Querystr != null) {
+				boolean check = Querystr.contains("sso");
+					if (check) {
+						String strQry = request.getQueryString().toString();
+						if (strQry.length() > 0) {
+							httpSession.setAttribute("WelcomeURL", strQry.trim());
+							strQry = decrypt(strQry);
+							String tempUsername = "UserName=", tempPassWord = "&password=";
+							String strUser = strQry.substring(
+									strQry.indexOf(tempUsername)
+											+ tempUsername.length(),
+									strQry.indexOf(tempPassWord));
+							String strPwd = strQry.substring(strQry
+									.indexOf(tempPassWord) + tempPassWord.length());
+							if (strUser != null && strPwd != null) {
+								
+								httpSession.setAttribute("sso", "sso");
+								userName = decrypt(strUser);
+								userPassword = decrypt(strPwd);
+							}
+		
+						} else {
+							return mapping.findForward(FAILURE);
+						}
+					} 
+					else {
+					return mapping.findForward(FAILURE);
+				}
+			}//END Encription code.
+
+			try {
+	
+				// validation for user logged in via CSpeak login.
+				if (userName == null && userPassword == null) {
+					httpSession.setAttribute("sso", null);
+					userName = request.getParameter("userName");
+					userPassword = request.getParameter("password");
+				}
+				
+				// if invalid credential provided via GIDC 
+				//forwarding to CSpeak Login page.
+				if (userName == null && userPassword == null) {
+					return mapping.findForward(FAILURE);
+				}
+				
+				//service.stopApplication("stop");
+				User userDetails = new User();
+				User userObj = new User();
+				// Authentication for login User.
+				//userDetails =getUserDetails(userName, userPassword, userObj);
+				userDetails.setEmail(userName+"@ciber.com");
+				userDetails=new JDBCService().getUserDetails(userDetails);
+			
+				if (userDetails.getEmail() == null) {
+					messages.add("userName", new ActionMessage("error.inavlid"));
+					saveMessages(request, messages);
+					return mapping.findForward(FAILURE);
+				}
+				
+				// Assign roles
+				if (userDetails != null
+						&& userDetails.getEmail()!=null && !adminUsers.contains(userDetails.getEmail())) {
+					userDetails.setRole("u");
+					userDetails.setUserId(userName);
+					userDetails.setFirstName(userName);
+					userDetails.setPassword(userPassword);
+	
+				} else {
+					userDetails.setRole("a");
+					userDetails.setUserId(userName);
+					userDetails.setFirstName(userName);
+					userDetails.setPassword(userPassword);
+				}
+				
+				httpSession.setAttribute("user", userDetails);
+			
+				if (userDetails != null &&(!userDetails.getIsReporties() && (userDetails.getRole() != null
+						&& (userDetails.getRole().equalsIgnoreCase("u"))))) {
+	
+					ArrayList<UserApplicationList> obj=new JDBCService().currentApplicationsUsr(userDetails,userDetails.getUserId());
+					request.getSession().setAttribute("currentList", obj);
+					return mapping.findForward(SUCCESS);
+				}
+				else if ((userDetails != null)
+						&& (userDetails.getRole() != null && userDetails.getRole()
+								.equalsIgnoreCase("a")) || userDetails.getIsReporties()) {
+					ArrayList<ApplicationModel> obj = new JDBCService()
+							.currentApplications(userDetails);
+					request.getSession().removeAttribute("showCount");
+					request.getSession().setAttribute("currentApp", obj);
+					if(obj.size()==1){
+						ApplicationModel model=obj.get(0);
+						userDetails.setAppId(model.getAppId());
+						boolean flag=model.isShowCount();
+						int respondentCount=Integer.valueOf(model.getRespondedCount());
+						request.getSession().setAttribute("showCount", flag);
+						
+					}
+					return mapping.findForward(ADMIN);
+				} else {
+					messages.add("userName", new ActionMessage("error.inavlid"));
+					saveMessages(request, messages);
+					return mapping.findForward(FAILURE);
+				}
+				// Ends
+				} catch (Exception e) {
+				e.printStackTrace();
+				messages.add(Constants.INVALID_USERNAME, new ActionMessage(
+						Constants.INVALID_USERNAME_MESSAGE));
+				saveErrors(request, messages);
+				return mapping.findForward(Constants.FAILURE_KEY);
+			}
+
+	}
+
+	/**
+	 * 
+	 * @param strQry
+	 * @return
+	 */
+	public static String encrypt(String strQry){
+		try {
+			String rez = enc.encode( strQry.getBytes( DEFAULT_ENCODING ) );
+			return rez;         
+		}
+		catch ( UnsupportedEncodingException e ) {
+			return null;
+		}
+	}
+	
+	/**
+	 * 
+	 * @param strQry
+	 * @return
+	 */
+	private String decrypt(String strQry){
+
+		try {
+			return new String(dec.decodeBuffer( strQry ),DEFAULT_ENCODING);
+		}
+		catch ( IOException e ) {
+			return null;
+		}
+
+	}//base64decode
+
+	private String getBetween(String strSource, String strStart, String strEnd)
+	{
+		int Start, End;
+		if (strSource.contains(strStart) && strEnd.length() ==0)
+		{
+			Start = strSource.indexOf(strStart, 0) + strStart.length();               
+			return strSource.substring(Start);
+		}
+		else if (strSource.contains(strStart) && strSource.contains(strEnd))
+		{
+			Start = strSource.indexOf(strStart, 0) + strStart.length();
+			End = strSource.indexOf(strEnd, Start);
+			return strSource.substring(Start, End - Start);
+		}
+		else
+		{
+			return "";
+		}
+	}
+	/**
+	 * This method checks whether login user is valid LDAP user or not. 
+	 * If User is valid LDAP user then user are retrieved from LDAP.
+	 * Also checks whether has admin role or not from the database.
+	 *  
+	 * @param userName
+	 * @param userPassword
+	 * @param userObj
+	 * @return User objec
+	 * @throws AuthenticationException
+	 * @throws NamingException
+	 */
+	private User getUserDetails(String userName, String userPassword,
+			User userObj) throws AuthenticationException, NamingException {
+		Hashtable authEnv = new Hashtable();
+		DirContext authContext = null;
+		try {
+			authEnv.put(Context.INITIAL_CONTEXT_FACTORY, Constants.LDAP_CONTEXT_FACTORY);
+			authEnv.put(Context.PROVIDER_URL, Constants.LDAP_SERVER_URL);
+			authEnv.put(Context.SECURITY_AUTHENTICATION, Constants.LDAP_AUTH_TYPE);
+			authEnv.put(Context.SECURITY_PRINCIPAL, Constants.CIBER_LDAP_DOMAIN + userName);
+			//authEnv.put(Context.SECURITY_PRINCIPAL, "CIBER-COM\\"+userName);
+			authEnv.put(Context.SECURITY_CREDENTIALS, userPassword);
+			authContext = new InitialDirContext(authEnv);
+
+			String filter = "(&(objectClass=person)(sAMAccountName=" + userName + "))";
+			String[] attrIDs = { Constants.LDAP_SIRNAME, Constants.LDAP_GIVENNAME, Constants.LDAP_MAIL, Constants.LDAP_SAMACCOUNTNAME };
+
+	
+
+			SearchControls ctls = new SearchControls();
+			ctls.setReturningAttributes(attrIDs);
+			ctls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+			NamingEnumeration answer = authContext.search("", filter, ctls);
+
+			while (answer.hasMoreElements()) {
+				SearchResult sr = (SearchResult) answer.next();
+				Attributes data = sr.getAttributes();
+				String firstName = "";
+				if(data.get(Constants.LDAP_GIVENNAME).toString() != null) {
+					firstName = data.get(Constants.LDAP_GIVENNAME).toString();
+					userObj.setFirstName(firstName.substring(11));
+				}
+				String lastName = "";
+				if(data.get(Constants.LDAP_SIRNAME).toString() != null) {
+					lastName = data.get(Constants.LDAP_SIRNAME).toString();
+					userObj.setLastName(lastName.substring(4));
+				}
+				String email = "";
+				if(data.get(Constants.LDAP_MAIL).toString() != null) {
+					email = data.get(Constants.LDAP_MAIL).toString();
+					userObj.setEmail(email.substring(6));
+				}
+			}
+		
+		}catch(Exception e) {
+			
+		}
+		finally {
+			
+		}
+
+		return userObj;
+	}
+
+}

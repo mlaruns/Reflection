@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+       
+<tiles-definitions>
+    
+    <definition name="baseLayout" path="/jsp/template.jsp">
+		<put name="title"  value="Quiz app" />
+		<put name="header" value="/jsp/header_lgn.jsp" />
+		<put name="body"   value="/jsp/login.jsp" />
+		<put name="footer" value="/jsp/footer.jsp" />
+	</definition>
+	
+	   <definition name="logoutAppl" path="/jsp/template.jsp">
+		<put name="title"  value="Quiz app" />
+		<put name="header" value="/jsp/header_lgn.jsp" />
+		<put name="body"   value="/jsp/index.jsp" />
+		<put name="footer" value="/jsp/footer.jsp" />
+	</definition>
+	
+	 <definition name="adminlogin" extends="baseLayout">
+		<put name="title"  value="Welcome administrator" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/AdminModule/adminHome.jsp" />
+	</definition>
+		
+	<definition name="AdminHome" extends="baseLayout">
+		<put name="title"  value="Welcome administrator" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/AdminModule/adminHome.jsp" />
+	</definition>
+	
+	<definition name="normalLogin" extends="adminlogin">
+		<put name="title"  value="Welcome" />
+		<put name="body"   value="/AdminModule/questions.jsp" />
+	</definition>
+	
+	<definition name="view" extends="adminlogin">
+		<put name="title"  value="view" />
+		<put name="body"   value="/jsp/View.jsp" />
+	</definition>
+	
+	<definition name="viewRecent" extends="adminlogin">
+		<put name="title"  value="View Recent" />
+		<put name="body"   value="/AdminModule/viewRecent.jsp" />
+	</definition>
+	
+	<definition name="deleteApp" extends="adminlogin">
+		<put name="title"  value="View Recent" />
+		<put name="body"   value="/AdminModule/viewRecent.jsp" />
+	</definition>
+	
+	<definition name="createNewApp" extends="adminlogin">
+		<put name="title"  value="View Recent" />
+		<put name="body"   value="/AdminModule/addApplication.jsp" />
+	</definition>
+	
+	
+	<definition name="checkSuccess" extends="adminlogin">
+		<put name="title"  value="Welcome" />
+		<put name="body"   value="/jsp/Thanks.jsp" />
+	</definition>
+	
+	
+	<definition name="addQueSuccess" extends="adminlogin">
+		<put name="title"  value="Add questions" />
+		<put name="body"   value="/AdminModule/AddQuesSuccess.jsp" />
+	</definition>
+
+	<definition name="deleteQuestionSuccess" extends="adminlogin">
+		<put name="title"  value="Delete questions" />
+		<put name="body"   value="/AdminModule/deletequestion.jsp" />
+	</definition>
+
+	
+		
+	<definition name="excelUpload" extends="adminlogin">
+		<put name="title"  value="Upload questions in Excel" />
+		<put name="body"   value="/AdminModule/uploadExcel.jsp" />
+	</definition>
+	
+	
+ <definition name="optionList" extends="baseLayout">
+		<put name="title"  value="SelectOption" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/optionList.jsp" />
+	</definition>	
+	
+	<definition name="ImprovementOpt" extends="baseLayout">
+		<put name="title"  value="SelectOption" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/ImprovementOpt.jsp" />
+	</definition>
+	
+	<definition name="reportiesView" extends="baseLayout">
+		<put name="title"  value="Reporties" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/reporties.jsp" />
+	</definition>
+	
+	<definition name="feedBackView" extends="baseLayout">
+		<put name="title"  value="viewFeedBack" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/viewFeedBack.jsp" />
+	</definition>
+	<definition name="viewSurvey" extends="baseLayout">
+		<put name="title"  value="viewFeedBack" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/ViewSurvey.jsp" />
+	</definition>
+	<definition name="viewSurveyMng" extends="baseLayout">
+		<put name="title"  value="viewFeedBack" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/surveyManagerView.jsp" />
+	</definition>
+	
+	<definition name="competencyView" extends="baseLayout">
+		<put name="title"  value="viewFeedBack" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/jsp/competencyView.jsp" />
+	</definition>
+	
+	 <definition name="quizResultDisplay" extends="baseLayout">
+		<put name="title"  value="SelectOption" />
+		<put name="header" value="/jsp/header_qst.jsp" />  
+		<put name="body"   value="/jsp/quizResultDisplay.jsp" />
+	</definition>
+	 <definition name="uploadManager" extends="baseLayout">
+		<put name="title"  value="Upload Manager Data" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/AdminModule/updateManagerInfo.jsp" />
+	</definition>
+	
+	<definition name="managerInof" extends="baseLayout">
+		<put name="title"  value="Manager Information" />
+		<put name="header" value="/jsp/header_qst.jsp" />
+		<put name="body"   value="/AdminModule/searchManager.jsp" />
+	</definition>
+	<definition name="login" extends="baseLayout">
+		<put name="title"  value="login" />
+	<put name="header" value="/jsp/header_lgn.jsp" />
+		<put name="body"   value="/jsp/login.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,1129 @@
+
+
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/img04.jpg) repeat left top;
+}
+
+body, th, td, input, textarea {
+    text-align: justify;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666666;
+}
+
+img {
+    border: 0px;
+}
+
+h1, h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 1em;
+    color: #54038E;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+p, ul, ol {
+    line-height: 1.8em;
+    font-size: 1.1em;
+}
+
+ul, ol {
+    margin-left: 3em;
+}
+
+blockquote {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: #75043D;
+}
+
+    a:hover {
+        border: none;
+    }
+
+h1 a, h2 a, h3 a {
+    border: none;
+    text-decoration: none;
+    color: #00B4CE;
+}
+
+    h1 a:hover, h2 a:hover, h3 a:hover {
+        background: none;
+        color: #B10961;
+    }
+
+hr {
+    display: none;
+}
+
+/*content table style START*/
+.tablecont-6 {}
+.tablecont-6 th { color:#666 !important; }
+.tablecont-6 th a { color:#666 !important; }
+.tablecont {
+    border-collapse: collapse;
+}
+
+    .tablecont th {
+        border: 1px solid #CCC;
+    }
+
+    .tablecont td {
+        border: 1px solid #CCC;
+        padding: 3px;
+    }
+
+    .tablecont th {
+        border: 1px solid #808080;
+        background-color: #CCC;
+        padding: 1px;
+    }
+
+.tablecontB {
+    border-collapse: collapse;
+}
+
+    .tablecontB th {
+        border: 1px solid #000000;
+        margin: 2px;
+    }
+
+    .tablecontB td {
+        border: 1px solid #000000;
+        padding: 3px;
+    }
+
+    .tablecontB th {
+        border: 1px solid #000000;
+        background-color: #CCCCCC;
+        padding: 3px;
+    }
+
+/*content table style END*/
+
+/*content table-style 2 START*/
+.tablecont2 {
+    border-collapse: collapse;
+}
+
+    .tablecont2 td {
+        border: 1px solid #CCC;
+        padding: 0px;
+        background-color: #FFFFFF;
+    }
+
+    .tablecont2 th {
+        border: 1px solid #CCC;
+        margin: 2px;
+        background-color: #CCCCCC;
+    }
+/*content table style END*/
+
+/* Wrapper */
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/img03.jpg) repeat-y left top;
+}
+
+.page-wrapper {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/img03.jpg) repeat-y left top;
+}
+/* Wrapper */
+
+#wrapperdlmr {
+    width: 1315px !important;
+    margin: 0 auto;
+    background: url(../images/img03dlmr.jpg) repeat-y left top;
+}
+/* Wrapper */
+
+#esmwrapper {
+    width: 1270px;
+    margin: 0 auto;
+    background: url(../images/img03_esm.jpg) repeat-y left top;
+}
+
+
+html > body #wrapper {
+    height: auto;
+}
+
+/* Header */
+
+#header {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/img1_homepage.jpg) no-repeat top left;
+}
+
+#headerDLRM {
+    width: 1242px;
+    margin: 0 auto;
+    background: url(../images/img1_homepage.jpg) no-repeat top left;
+}
+
+#headercamssubpage {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/img01_subpage_cams.jpg) no-repeat top left;
+}
+
+#headersubpage {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/image-cartoon-1.jpg) no-repeat top left;
+}
+
+
+#headersubpagedlmr {
+    width: 1315px;
+    margin: 0 auto;
+    background: url(../images/img01_subpage_dlmr.jpg) no-repeat top left;
+}
+
+#headersubpagecpms {
+    width: 1315px;
+    margin: 0 auto;
+    background: url(../images/img05_subpage1_CPMSLarge.jpg) no-repeat top left;
+}
+
+#headeresmsubpage {
+    width: 1270px;
+    margin: 0 auto;
+    background: url(../images/img01_subpage_esm.jpg) no-repeat top left;
+}
+
+#headercerpsubpage {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/img01_subpage_cerp.jpg) no-repeat top left;
+}
+
+#headerrnrsubpage {
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/rnr02_subpage.jpg) no-repeat top left;
+}
+
+#menu {
+    height: 85px;
+    width: 900px;
+}
+
+#NavigationMenu {
+    height: 85px;
+    width: 1000px;
+}
+
+    #NavigationMenu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: normal;
+    }
+
+    #NavigationMenu li {
+        float: left;
+    }
+
+    #NavigationMenu a {
+        display: block;
+        float: left;
+        padding: 15px 30px 16px 30px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: #FFFFFF;
+    }
+
+        #NavigationMenu a:hover {
+            color: #C0F;
+        }
+
+    #NavigationMenu img {
+        border: none;
+        margin-bottom: -5px;
+    }
+
+    #NavigationMenu .current_page_item a {
+        padding: 15px 30px 16px 30px;
+        color: #009;
+    }
+
+    #NavigationMenu .last {
+    }
+/*Page Navigate menu */
+.Initial {
+    display: block;
+    padding: 4px 18px 4px 18px;
+    float: left;
+    background: url("../Images/InitialImage.png") no-repeat right top;
+    color: Black;
+    font-weight: bold;
+}
+
+    .Initial:hover {
+        color: White;
+        background: url("../Images/SelectedButton.png") no-repeat right top;
+    }
+
+.Clicked {
+    float: left;
+    display: block;
+    background: url("../Images/SelectedButton.png") no-repeat right top;
+    padding: 4px 18px 4px 18px;
+    color: Black;
+    font-weight: bold;
+    color: White;
+}
+
+
+
+/* Login */
+#login {
+    float: right;
+    margin: 0px;
+}
+
+#loginesm {
+    float: right;
+    margin: 0px;
+    margin-right: 20px;
+}
+
+
+/* Logo */
+
+#banner {
+    width: 960px;
+    height: 155px;
+    margin: 0 auto;
+    background: url(../images/img05_homepage.jpg) no-repeat left top;
+}
+
+#bannersubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img05_subpage1.jpg) no-repeat left top;
+}
+
+#banneresmsubpage {
+    width: 1270px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img05_esm_subpage.jpg) no-repeat left top;
+}
+
+#bannercprmssubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img_2.png) no-repeat left top;
+}
+
+#bannergidc {
+    width: 960px;
+    height: 155px;
+    margin: 0 auto;
+    background: url(../images/homepage_03.jpg) no-repeat left top;
+}
+
+#bannerdlmrsubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img05_subpage1_dlmr.jpg) no-repeat left top;
+}
+
+#bannersubpagedlmr {
+    width: 1315px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img05_subpagedlmr.jpg) no-repeat left top;
+}
+
+#bannersubpagecprmswide {
+    width: 1315px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/CPRMS_large.jpg) no-repeat left top;
+}
+
+#bannergidcsubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/Banner_H71.jpg) no-repeat left top;
+}
+
+#bannercspmsubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img05_subpage.jpg) no-repeat left top;
+}
+
+#bannercerpsubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img05_subpage_cerp.jpg) no-repeat left top;
+}
+
+#bannerrnrsubpage {
+    width: 960px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/rnr01_subpage.jpg) no-repeat left top;
+}
+
+#bannersubpagecpmswide {
+    width: 1315px;
+    height: 71px;
+    margin: 0 auto;
+    background: url(../images/img01_subpage_CPMS_large.jpg) no-repeat left top;
+}
+/* Page */
+
+#page {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: none;
+}
+
+#page2 {
+    /*width: 100%;*/
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: none;
+}
+
+#pagedlmr {
+    width: 1315px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: none;
+}
+
+#pageesm {
+    width: 1270px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: none;
+}
+
+/* Content */
+
+#content {
+    float: left;
+    width: 940px;
+}
+
+
+#content2 {
+    width: 93%;
+    padding-left: 40px;
+    float: left;
+}
+
+#content3 {
+    width: 1200px;
+    padding-left: 75px;
+    padding-right: 100px;
+    float: left;
+}
+
+#contentdlmr {
+    float: left;
+    width: 1220px;
+}
+
+#content2dlmr {
+    width: 1220px;
+    padding-left: 20px;
+    float: left;
+}
+
+#contentesm {
+    float: left;
+    width: 1270px;
+}
+
+#content2esm {
+    width: 1240px;
+    padding-left: 10px;
+    float: left;
+}
+
+/* Footer */
+
+#footer {
+    margin: 0 auto;
+    background: #99ff33;
+    height: 20px;
+    width: 960px;
+    position: relative;
+}
+
+.footer {
+    background: #54038e;
+    height: 20px;
+}
+
+    /* Footer */
+
+    #footer p, .footer p {
+        text-align: center;
+        color: #fff;
+    }
+
+    #footer a {
+        padding: 2px 7px;
+        color: #FFFFFF;
+    }
+
+#dlmrfooter {
+    margin: 0 auto;
+    background: #99ff33;
+    height: 20px;
+    width: 1315px;
+    position: relative;
+}
+
+    #dlmrfooter p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #000000;
+    }
+
+#esmfooter {
+    margin: 0 auto;
+    background: #99ff33;
+    height: 20px;
+    width: 1270px;
+    position: relative;
+}
+
+    #esmfooter p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #000000;
+    }
+
+    #esmfooter a {
+        padding: 2px 7px;
+        color: #FFFFFF;
+    }
+/*----------------------*/
+
+.loginText {
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    color: #454545;
+    text-align: left;
+    vertical-align: top;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    background-color: #FFFFFB;
+    background-image: url(../images/signup_lock.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/**********************************/
+/*        CSS Curved Box          */
+/**********************************/
+
+/* set the image to use and establish the lower-right position */
+.cssbox, .cssbox_body, .cssbox_head, .cssbox_head h2 {
+    background: transparent url(../images/curve_graybox.jpg) no-repeat bottom right;
+}
+
+
+
+.cssbox {
+    width: 97% !important; /*intended total box width - padding-right(next) */
+    width: 97%; /* IE Win = width - padding */
+    padding-right: 15px; /* the gap on the right edge of the image (not content padding) */
+}
+
+.cssdlmrbox {
+    width: 93% !important; /*intended total box width - padding-right(next) */
+    width: 86%; /* IE Win = width - padding */
+    padding-right: 15px; /* the gap on the right edge of the image (not content padding) */
+}
+
+/* set the top-right image */
+.cssbox_head {
+    background-position: top right;
+    margin-right: -15px; /* pull the right image over on top of border */
+    padding-right: 20px; /* right-image-gap + right-inside padding */
+}
+
+    /* set the top-left image */
+    .cssbox_head h2 {
+        background-position: top left;
+        border: 0; /* ditto */
+        text-align: left;
+        color: #666;
+        padding: 15px 0 10px 15px; /* padding-left = image gap + interior padding ... no padding-right */
+        font: normal bold 12pt Trebuchet MS;
+        height: auto !important;
+        height: 1%; /* IE Holly Hack */
+        margin: 0; /* reset main site styles*/
+    }
+
+
+/* set the lower-left corner image */
+.cssbox_body {
+    background-position: bottom left;
+    margin-right: 0px; /* interior-padding right */
+    padding: 0px 0px 15px 15px; /* mirror .cssbox_head right/left */
+}
+
+
+/* End New Curved Box */
+
+
+/* Plain Curved Box */
+
+/* set the image to use and establish the lower-right position */
+.cssbox_pln, .cssbox_body_pln, .cssbox_head_pln, .cssbox_head_pln h2 {
+    background: transparent url(../images/curve_box_plain.gif) no-repeat bottom right;
+}
+
+.cssbox_pln {
+    width: 98% !important; /*intended total box width - padding-right(next) */
+    width: 96%; /* IE Win = width - padding */
+    padding-right: 15px; /* the gap on the right edge of the image (not content padding) */
+}
+
+/* set the top-right image */
+.cssbox_head_pln {
+    background-position: top right;
+    margin-right: -15px; /* pull the right image over on top of border */
+    padding-right: 20px; /* right-image-gap + right-inside padding */
+}
+
+    /* set the top-left image */
+    .cssbox_head_pln h2 {
+        background-position: top left;
+        margin: 0; /* reset main site styles*/
+        border: 0; /* ditto */
+        padding: 0 0 0 15px; /* padding-left = image gap + interior padding ... no padding-right */
+        height: auto !important;
+        height: 1%; /* IE Holly Hack */
+        font: normal 500 8pt Trebuchet MS;
+        text-align: left;
+        color: #FFF;
+    }
+
+/* set the lower-left corner image */
+.cssbox_body_pln {
+    background-position: bottom left;
+    margin-right: 0px; /* interior-padding right */
+    padding: 0px 0px 15px 15px; /* mirror .cssbox_head right/left */
+}
+
+/* End Plain Curved Box */
+
+/**********************************/
+/*      Form Button Style         */
+/**********************************/
+
+a.squarebutton {
+    background: transparent url('../images/square-gray-left.gif') no-repeat top left;
+    display: block;
+    float: left;
+    font: normal small-caps bold 11px Arial; /* Change 12px as desired */
+    line-height: 15px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+    height: 23px; /* Height of button background height */
+    padding-left: 9px; /* Width of left NavigationMenu image */
+    text-decoration: none;
+    color: #000;
+}
+
+a.squarebuttonClicked {
+    background: transparent url('../images/square-green-left.gif') no-repeat top left;
+    display: block;
+    float: left;
+    font: normal small-caps bold 11px Arial; /* Change 12px as desired */
+    line-height: 15px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+    height: 23px; /* Height of button background height */
+    padding-left: 9px; /* Width of left NavigationMenu image */
+    text-decoration: none;
+    color: #000;
+}
+
+a:link.squarebutton, a:visited.squarebutton, a:active.squarebutton {
+    color: #494949; /*button text color*/
+    text-decoration: none;
+}
+
+a.squarebutton span {
+    background: transparent url('../images/square-gray-right.gif') no-repeat top right;
+    display: block;
+    padding: 4px 9px 4px 0px; /*Set 9px below to match value of 'padding-left' value above*/
+    text-decoration: none;
+}
+
+a.squarebutton:hover { /* Hover state CSS */
+    background-position: bottom left;
+    text-decoration: none;
+}
+
+    a.squarebutton:hover span { /* Hover state CSS */
+        background-position: bottom right;
+        color: #660099;
+        text-decoration: none;
+    }
+
+.buttonwrapper { /* Container you can use to surround a CSS button to clear float */
+    overflow: hidden;
+    /*width: 100%;*/
+}
+
+.buttonwidth130 {
+    width: 130px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttonwidth100 {
+    width: 100px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttonwidth70 {
+    width: 70px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttonwidth25 {
+    width: 25px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    clear: both;
+}
+
+/* End Form Button Style */
+
+/**********************************/
+/*     Green Button Style         */
+/**********************************/
+
+.grbutton {
+    margin-right: 30px;
+    float: right;
+}
+
+
+a.greenbutton {
+    background: transparent url('../images/square-green-left.gif') no-repeat top left;
+    display: block;
+    float: left;
+    font: normal small-caps bold 11px Arial; /* Change 12px as desired */
+    line-height: 15px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+    height: 23px; /* Height of button background height */
+    padding-left: 9px; /* Width of left NavigationMenu image */
+    text-decoration: none;
+    color: #000;
+}
+
+a:link.greenbutton, a:visited.greenbutton, a:active.greenbutton {
+    color: #494949; /*button text color*/
+    text-decoration: none;
+}
+
+a.greenbutton span {
+    background: transparent url('../images/square-green-right.gif') no-repeat top right;
+    display: block;
+    padding: 4px 9px 4px 0px; /*Set 9px below to match value of 'padding-left' value above*/
+    text-decoration: none;
+}
+
+a.greenbutton:hover { /* Hover state CSS */
+    background-position: bottom left;
+    text-decoration: none;
+}
+
+    a.greenbutton:hover span { /* Hover state CSS */
+        background-position: bottom right;
+        color: #660099;
+        text-decoration: none;
+    }
+
+.greenbuttonwrapper { /* Container you can use to surround a CSS button to clear float */
+    overflow: hidden;
+    /*width: 100%;*/
+}
+
+.buttonwidth130 {
+    width: 130px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttonwidth100 {
+    width: 100px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttonwidth70 {
+    width: 70px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttonwidth25 {
+    width: 25px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    clear: both;
+}
+
+/* End green Button Style */
+
+.text_hidden {
+    display: none;
+    visibility: visible;
+}
+
+.text_visible {
+    display: block;
+    visibility: visible;
+    line-height: 18px;
+}
+
+.failureNotification {
+    font-size: 1.2em;
+    color: Red;
+}
+
+
+
+.menu a.static.selected {
+    color: #009 !important;
+    text-decoration: none !important;
+    padding: 15px 30px 16px 30px !important;
+}
+
+
+#point_button {
+    background: url(../images/coin-button.png) no-repeat left top;
+    height: 100px;
+    width: 400px;
+    padding-top: 48px;
+    padding-left: 115px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.button {
+    border: 1px solid #006;
+    background: #54038E;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    padding-left:20px;
+    padding-right:20px;
+    cursor: pointer;
+}
+
+
+.buttonPadding {
+    padding-left:10px;
+    padding-right:10px;
+}
+.tabbutton {
+    border: 1px solid #006;
+    background: #54038E;
+    color: #494949;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*CollapsiblePanel*/
+.collapsePanel {
+    background-color: white;
+    overflow: hidden;
+}
+
+.collapsePanelHeader {
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/bg-menu-main.png);
+    background-repeat: repeat-x;
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+
+.loginHighlight {
+    border: 2px solid grey;
+    background: #FFFFFF url( "./gr.png" ) repeat-x 0 1px;
+    color: #666666;
+    width: 80%;
+}
+
+.loginNormal {
+    border: 1px solid #cdcdcd;
+    background: #FFFFFF url( "./gr.png" ) repeat-x 0 1px;
+    color: #666666;
+    width: 80%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.frmLbl {
+    font-family: serif;
+}
+
+.btnNormal {
+    border: 1px solid #cdcdcd;
+    background: #FFFFFF url( "./grG.png" ) repeat-x 0 1px;
+    color: black;
+}
+
+.custtable {
+    word-wrap: break-word;
+    width: 200px;
+    align: left;
+}
+
+.reportinput {
+    text-align: center !important;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666666;
+}
+
+table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #dedede;
+    border-collapse: collapse;
+}
+
+    table.gridtable th {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #dedede;
+        background-color: #dedede;
+    }
+
+    table.gridtable td {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #dedede;
+        background-color: #ffffff;
+    }
+
+    table.gridtable tr:nth-child(even) {
+        /*(even) or (2n 0)*/
+        background: #A4D1FF;
+    }
+
+    table.gridtable tr:nth-child(odd) {
+        /*(odd) or (2n 1)#EAF4FF*/
+        background: Gray;
+    }
+
+.AppraisalLinks {
+    color: Blue;
+    text-decoration: underline;
+    white-space: pre-wrap;
+    width: 100px;
+}
+
+.ComptencyLinks {
+    color: Blue;
+    text-decoration: underline;
+    white-space: pre-wrap;
+    width: 100px;
+}
+
+.contentInPopup {
+    position: relative;
+    z-index: 1901;
+    width: 1000px;
+    border: 1px solid #aaa;
+    top: 50%;
+    left: 16%;
+    background: #efefef;
+    padding: 20px;
+}
+
+.editPopup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.popupWrapper {
+    width: 1980px;
+    height: 1080px;
+    z-index: 1900;
+    background: transparent;
+    position: absolute;
+    padding: 10px;
+}
+
+.monthlyFeedbackLink {
+    color: Blue;
+    white-space: pre-wrap;
+    cursor: pointer;
+    text-decoration: underline;
+    float: left;
+}
+
+.success {
+    border: 1px solid #20b2aa;
+    color: #006400;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 4px;
+}
+
+.rawDataTable td, .rawDataTable th {
+    padding: 3px;
+}
+
+table.rawDataTable {
+    font: 13px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+}
+
+table.rawDataTable, table.rawDataTable td, table.rawDataTable tr, table.rawDataTable th {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* ---- Table ---- */
+
+table.rawDataTable {
+    border-collapse: collapse;
+    width: 92%;
+}
+
+tr.curved th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+tr.curved th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+table.rawDataTable caption {
+    text-align: left;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+table.rawDataTable td,
+table.rawDataTable th {
+    padding: 5px;
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+    color: #000;
+}
+
+table.rawDataTable thead th {
+    background: #91c5d4;
+}
+
+    table.rawDataTable thead th[colspan],
+    table.rawDataTable thead th[rowspan] {
+        background: #66a9bd;
+        color: #fff;
+    }
+
+table.rawDataTable tbody th,
+table.rawDataTable tfoot th {
+    text-align: left;
+    background: #91c5d4;
+}
+
+table.rawDataTable tbody td,
+table.rawDataTable tfoot td {
+    text-align: center;
+    background: #d5eaf0;
+}
+
+table.rawDataTable tfoot th {
+    background: #b0cc7f;
+}
+
+table.rawDataTable tfoot td {
+    background: #d7e1c5;
+    font-weight: bold;
+}
+
+table.rawDataTable tbody tr.odd td {
+    background: #bcd9e1;
+}
+
+.error-msg ul { margin-left:0; }
+.error-msg ul li { list-style-type:none; }
+
+.ui-autocomplete{
+    width: 295px;
+    height: 235px; 
+    overflow-y: scroll; 
+    overflow-x: hidden;
+}
+
+input[type=button]:hover { 
+    //background-color: yellow;
+}

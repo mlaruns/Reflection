@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/JavaInternalProjects/!svn/ver/161/trunk/Reflections_UI/WebContent/WEB-INF
+END
+urlrewrite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/JavaInternalProjects/!svn/ver/98/trunk/Reflections_UI/WebContent/WEB-INF/urlrewrite.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/JavaInternalProjects/!svn/ver/98/trunk/Reflections_UI/WebContent/WEB-INF/web.xml
+END
+sessionInvalidate.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/JavaInternalProjects/!svn/ver/98/trunk/Reflections_UI/WebContent/WEB-INF/sessionInvalidate.jsp
+END
+pager-taglib.tld
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/JavaInternalProjects/!svn/ver/98/trunk/Reflections_UI/WebContent/WEB-INF/pager-taglib.tld
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/JavaInternalProjects/!svn/ver/98/trunk/Reflections_UI/WebContent/WEB-INF/server-config.wsdd
+END
+tiles-defs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/JavaInternalProjects/!svn/ver/161/trunk/Reflections_UI/WebContent/WEB-INF/tiles-defs.xml
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/JavaInternalProjects/!svn/ver/161/trunk/Reflections_UI/WebContent/WEB-INF/struts-config.xml
+END

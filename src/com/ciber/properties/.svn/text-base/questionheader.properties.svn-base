@@ -1,0 +1,24 @@
+#Incident details properties
+#============================
+	
+1 = Question
+2 = Priority
+3 = Description
+4 = Competency
+5 = Sub Competency
+6 = Option1
+7 = Option2
+8 = Option3
+9 = Option4
+10=PEER1
+11=PEER2
+12=HR
+13=IT
+14=CROSSFUNCTIONAL
+15=ADMIN
+16=QMO
+17=FINANCE
+18=RECRUITMENT
+19=RMG
+20=REPORTEE
+21=SUPERVISOR

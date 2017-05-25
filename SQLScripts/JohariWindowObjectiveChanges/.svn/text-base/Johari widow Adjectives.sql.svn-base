@@ -1,0 +1,56 @@
+IF EXISTS (
+		SELECT *
+		FROM sys.objects
+		WHERE object_id = OBJECT_ID(N'[REFLECTION].[JohariWidowAdjectives]')
+			AND type IN (N'U')
+		)
+	DROP TABLE [REFLECTION].[JohariWidowAdjectives]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [REFLECTION].[JohariWidowAdjectives] (
+	[option_id] [int] IDENTITY(1, 1) NOT NULL
+	,[option_name] [varchar](100) NOT NULL
+	,CONSTRAINT [JohariWidowAdjectives_PK] PRIMARY KEY CLUSTERED ([option_id] ASC) WITH (
+		PAD_INDEX = OFF
+		,STATISTICS_NORECOMPUTE = OFF
+		,IGNORE_DUP_KEY = OFF
+		,ALLOW_ROW_LOCKS = ON
+		,ALLOW_PAGE_LOCKS = ON
+		)
+	ON [PRIMARY]
+	) ON [PRIMARY]
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+-- inserion scripts
+/*INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('aggressive');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('negative');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('relaxed');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('religious');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('lively');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('lazy');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('selfish');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('uncertain');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('proud');
+INSERT INTO [REFLECTION].[JohariWidowAdjectives] (option_name)
+VALUES ('rejecting'); */
